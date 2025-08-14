@@ -29,6 +29,12 @@ export default [
         name: 'products_2003_03_20',
         component: 'app/products_2003_03_20/products_2003_03_20_index',
       },
+      {
+        path: 'kehe_product_2025_08_10',
+        layout: false,
+        name: 'kehe_product_2025_08_10',
+        component: 'app/kehe_product_2025_08_10/kehe_product_2025_08_10_index',
+      },
     ]
   },
   {

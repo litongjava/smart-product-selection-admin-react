@@ -1,8 +1,8 @@
 import ApiTable from '@/components/common/ApiTable';
-import { products_2003_03_20_columns } from '@/pages/app/products_2003_03_20/products_2003_03_20_column';
+import { amazon_product_2025_08_01_columns } from '@/pages/app/amazon_product_2025_08_01/amazon_product_2025_08_01_column';
 
 export default () => {
-  const from = 'products_2003_03_20';
+  const from = 'amazon_product_2025_08_01';
   const beforePageRequest = (params: any, isRecoveryMode?: boolean) => {
     params.idType = 'long';
 
@@ -32,9 +32,11 @@ export default () => {
   return (
     <ApiTable
       from={from}
-      columns={products_2003_03_20_columns()}
+      columns={amazon_product_2025_08_01_columns()}
       beforePageRequest={beforePageRequest}
       beforeCreateRequest={beforeCreateRequest}
+      editable={false}
+      removable={false}
     />
   );
 };

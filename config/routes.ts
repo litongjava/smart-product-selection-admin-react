@@ -24,16 +24,22 @@ export default [
         component: './Welcome',
       },
       {
-        path: 'products_2003_03_20',
+        path: 'products_2023_03_20',
         layout: false,
-        name: 'products_2003_03_20',
-        component: 'app/products_2003_03_20/products_2003_03_20_index',
+        name: 'products_2023_03_20',
+        component: 'app/products_2023_03_20/products_2023_03_20_index',
       },
       {
         path: 'kehe_product_2025_08_10',
         layout: false,
         name: 'kehe_product_2025_08_10',
         component: 'app/kehe_product_2025_08_10/kehe_product_2025_08_10_index',
+      },
+      {
+        path: 'amazon_product_2025_08_01',
+        layout: false,
+        name: 'amazon_product_2025_08_01',
+        component: 'app/amazon_product_2025_08_01/amazon_product_2025_08_01_index',
       },
     ]
   },

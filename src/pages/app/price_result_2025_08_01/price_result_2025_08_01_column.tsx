@@ -15,6 +15,8 @@ export const price_result_2025_08_01_columns = (): ProColumns<any>[] => [
     title: 'Name',
     dataIndex: 'name',
     valueType: 'text',
+    ellipsis: true,
+    copyable: true,
   },
   {
     title: 'Upc',

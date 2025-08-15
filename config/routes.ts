@@ -41,7 +41,13 @@ export default [
         name: 'amazon_product_2025_08_01',
         component: 'app/amazon_product_2025_08_01/amazon_product_2025_08_01_index',
       },
-    ]
+      {
+        path: 'price_result_2025_08_01',
+        layout: false,
+        name: 'price_result_2025_08_01',
+        component: 'app/price_result_2025_08_01/price_result_2025_08_01_index',
+      },
+    ],
   },
   {
     path: '/file',
@@ -67,7 +73,7 @@ export default [
         hideInMenu: false,
         component: './file/pdf/systemPdfIndex',
       },
-    ]
+    ],
   },
   {
     path: '/article',
@@ -140,7 +146,7 @@ export default [
         hideInMenu: false,
         component: './system/article_access_log/access_log_index',
       },
-    ]
+    ],
   },
   {
     path: '/user',

@@ -47,6 +47,12 @@ export default [
         name: 'price_result_2025_08_01',
         component: 'app/price_result_2025_08_01/price_result_2025_08_01_index',
       },
+      {
+        path: 'price_result_2025_08_01_gt_0',
+        layout: false,
+        name: 'price_result_2025_08_01_gt_0',
+        component: 'app/price_result_2025_08_01/price_result_2025_08_01_gt_0_index',
+      },
     ],
   },
   {

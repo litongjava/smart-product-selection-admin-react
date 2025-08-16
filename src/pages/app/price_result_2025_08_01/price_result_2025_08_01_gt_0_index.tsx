@@ -17,8 +17,10 @@ export default () => {
     params.update_time_type = 'string[]';
     params.update_time_op = 'bt';
 
-
-
+    params.profitOp = 'gt';
+    if(!params.profit){
+      params.profit='0';
+    }
     return params;
   };
 

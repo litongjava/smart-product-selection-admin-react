@@ -46,7 +46,6 @@ export const price_result_2025_08_01_columns = (): ProColumns<any>[] => [
     ellipsis: true,
     copyable: true,
   },
-
   {
     title: 'Kehe Price',
     dataIndex: 'kehe_price',
@@ -58,43 +57,42 @@ export const price_result_2025_08_01_columns = (): ProColumns<any>[] => [
     valueType: 'text',
   },
   {
-    title: 'Case Pack',
+    title: 'kehe_case_pack',
     dataIndex: 'kehe_case_pack',
     valueType: 'text',
   },
-
   {
-    title: 'purchase_cost',
+    title: 'amz_pack_count',
+    dataIndex: 'amazon_pack_count',
+    valueType: 'text',
+  },
+  {
+    title: 'kehe_purchase_cost',
     dataIndex: 'purchase_cost',
     valueType: 'text',
   },
   {
-    title: 'Amazon Price',
+    title: 'Amz Price',
     dataIndex: 'amazon_price',
     valueType: 'text',
   },
   {
-    title: 'Amazon Ref Percent',
+    title: 'Amz Ref Percent',
     dataIndex: 'amazon_ref_percent',
     valueType: 'text',
   },
   {
-    title: 'Amazon Commission',
+    title: 'Amz Commission',
     dataIndex: 'amazon_commission',
     valueType: 'text',
   },
   {
-    title: 'Amazon Fba Fees',
+    title: 'Amz Fba Fees',
     dataIndex: 'amazon_fba_fees',
     valueType: 'text',
   },
   {
-    title: 'Amazon Fba Fees',
-    dataIndex: 'amazon_fba_fees',
-    valueType: 'text',
-  },
-  {
-    title: 'net_revenue',
+    title: 'ama_net_revenue',
     dataIndex: 'net_revenue',
     valueType: 'text',
   },

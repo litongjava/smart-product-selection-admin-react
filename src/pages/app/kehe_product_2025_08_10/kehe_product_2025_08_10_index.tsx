@@ -2,7 +2,7 @@ import ApiTable from '@/components/common/ApiTable';
 import { kehe_product_2025_08_10_columns } from '@/pages/app/kehe_product_2025_08_10/kehe_product_2025_08_10_column';
 
 export default () => {
-  const from = 'kehe_product_2025_08_10';
+  const from = 'kehe_products_2025_08_10';
   const beforePageRequest = (params: any, isRecoveryMode?: boolean) => {
     params.idType = 'long';
 

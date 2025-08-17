@@ -9,6 +9,35 @@ export const kehe_product_2025_08_10_columns = (): ProColumns<any>[] => [
     hideInTable: false,
   },
   {
+    "title": "Asin",
+    "dataIndex": "asin",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
+
+  },
+  {
+    "title": "Upc",
+    "dataIndex": "upc",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
+  },
+  {
+    "title": "amazon_url",
+    "dataIndex": "amazon_url",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
+  },
+  {
+    "title": "kehe_url",
+    "dataIndex": "kehe_url",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
+  },
+  {
     title: 'Name',
     dataIndex: 'name',
     valueType: 'text',
@@ -20,13 +49,6 @@ export const kehe_product_2025_08_10_columns = (): ProColumns<any>[] => [
     title: 'Brand',
     dataIndex: 'brand_name',
     valueType: 'text',
-    hideInTable: false,
-  },
-  {
-    title: 'UPC',
-    dataIndex: 'upc',
-    valueType: 'text',
-    copyable: true,
     hideInTable: false,
   },
   {

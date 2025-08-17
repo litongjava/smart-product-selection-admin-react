@@ -1,5 +1,5 @@
 import TooltipButton from '@/components/common/TooltipButton';
-import { ArrowsAltOutlined, BorderOutlined } from '@ant-design/icons';
+import {ArrowsAltOutlined, BorderOutlined, VerticalLeftOutlined} from '@ant-design/icons';
 import {
   ActionType,
   FooterToolbar,
@@ -47,16 +47,21 @@ const DataTable: React.FC<DataTableProp> = ({
   toolBarRender,
 }) => {
   const [selectedRowsState, setSelectedRows] = useState<any[]>([]);
-  const [showBorder, setShowBorder] = useState<boolean>(false);
-  const [showGhost, setShowGhost] = useState<boolean>(false);
 
-  const handleBorderChange = () => {
-    setShowBorder(!showBorder);
-  };
+  const [showGhost, setShowGhost] = useState<boolean>(false);
+  const [scrollMode, setScrollMode] = useState<boolean>(false);
+  const [showBorder, setShowBorder] = useState<boolean>(false);
 
   const handleGhostChange = () => {
     setShowGhost(!showGhost);
   };
+  const handleScrollChange = () => {
+    setScrollMode(!scrollMode);
+  };
+  const handleBorderChange = () => {
+    setShowBorder(!showBorder);
+  };
+
 
   let showGhostButton = (
     <TooltipButton
@@ -64,6 +69,15 @@ const DataTable: React.FC<DataTableProp> = ({
       type="text"
       onClick={handleGhostChange}
       tooltipTitle="Ghost Mode"
+    />
+  );
+
+  let showScrollButton = (
+    <TooltipButton
+      icon={<VerticalLeftOutlined />}
+      type="text"
+      onClick={handleScrollChange}
+      tooltipTitle="Toggle Scroll Mode"
     />
   );
 
@@ -95,7 +109,7 @@ const DataTable: React.FC<DataTableProp> = ({
         rowKey="id"
         //sticky={!scrollMode ? { offsetHeader: 0 } : false}
         sticky={{ offsetHeader: 0 }}
-        // scroll={{ x: scrollMode ? true : undefined }}
+        scroll={{ x: scrollMode ? true : undefined }}
         ghost={showGhost}
         expandable={{
           expandedRowRender: (record) => (
@@ -126,7 +140,7 @@ const DataTable: React.FC<DataTableProp> = ({
             5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 96, 100,
           ],
         }}
-        toolBarRender={() => [...toolBarRender(), showGhostButton, showBorderButton]}
+        toolBarRender={() => [...toolBarRender(), showGhostButton,showScrollButton, showBorderButton]}
         rowSelection={{
           onChange: (_, selectedRows) => {
             setSelectedRows(selectedRows);

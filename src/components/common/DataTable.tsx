@@ -1,5 +1,5 @@
 import TooltipButton from '@/components/common/TooltipButton';
-import {ArrowsAltOutlined, BorderOutlined, VerticalLeftOutlined} from '@ant-design/icons';
+import { ArrowsAltOutlined, BorderOutlined, VerticalLeftOutlined } from '@ant-design/icons';
 import {
   ActionType,
   FooterToolbar,
@@ -61,7 +61,6 @@ const DataTable: React.FC<DataTableProp> = ({
   const handleBorderChange = () => {
     setShowBorder(!showBorder);
   };
-
 
   let showGhostButton = (
     <TooltipButton
@@ -140,7 +139,12 @@ const DataTable: React.FC<DataTableProp> = ({
             5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 96, 100,
           ],
         }}
-        toolBarRender={() => [...toolBarRender(), showGhostButton,showScrollButton, showBorderButton]}
+        toolBarRender={() => [
+          ...toolBarRender(),
+          showGhostButton,
+          showScrollButton,
+          showBorderButton,
+        ]}
         rowSelection={{
           onChange: (_, selectedRows) => {
             setSelectedRows(selectedRows);
@@ -185,8 +189,15 @@ const DataTable: React.FC<DataTableProp> = ({
           />
         )}
       </Drawer>
+      <style>
+        {`
+        .ant-table-cell {
+          min-width: 60px;
+          max-width: 240px;
+        }
+      `}
+      </style>
     </>
   );
 };
-
 export default DataTable;

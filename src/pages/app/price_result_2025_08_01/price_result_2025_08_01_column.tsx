@@ -117,7 +117,7 @@ export const price_result_2025_08_01_columns = (): ProColumns<any>[] => [
     title: 'Update Time',
     dataIndex: 'update_time_range',
     valueType: 'dateTimeRange',
-    hideInTable: true, // 仅用于搜索
+    hideInTable: true,
     hideInForm: true,
     hideInDescriptions: true,
   },

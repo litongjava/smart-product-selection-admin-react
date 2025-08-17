@@ -8,7 +8,7 @@ import {
   ProDescriptionsItemProps,
   ProTable,
 } from '@ant-design/pro-components';
-import { Button, Drawer } from 'antd';
+import { Button, Drawer, Typography } from 'antd';
 import { SortOrder } from 'antd/lib/table/interface';
 import React, { useState } from 'react';
 
@@ -35,17 +35,17 @@ type DataTableProp = {
 };
 
 const DataTable: React.FC<DataTableProp> = ({
-                                              columns,
-                                              actionRef,
-                                              pageRequest,
-                                              batchRequest,
-                                              currentRow,
-                                              setCurrentRow,
-                                              mode,
-                                              showDetail,
-                                              setShowDetail,
-                                              toolBarRender,
-                                            }) => {
+  columns,
+  actionRef,
+  pageRequest,
+  batchRequest,
+  currentRow,
+  setCurrentRow,
+  mode,
+  showDetail,
+  setShowDetail,
+  toolBarRender,
+}) => {
   const [selectedRowsState, setSelectedRows] = useState<any[]>([]);
   const [showBorder, setShowBorder] = useState<boolean>(false);
   const [showGhost, setShowGhost] = useState<boolean>(false);
@@ -98,7 +98,14 @@ const DataTable: React.FC<DataTableProp> = ({
         // scroll={{ x: scrollMode ? true : undefined }}
         ghost={showGhost}
         expandable={{
-          expandedRowRender: (record) => <p>{JSON.stringify(record)}</p>,
+          expandedRowRender: (record) => (
+            <Typography.Paragraph
+              copyable={{ text: JSON.stringify(record, null, 2) }}
+              style={{ margin: 0 }}
+            >
+              {JSON.stringify(record)}
+            </Typography.Paragraph>
+          ),
         }}
         bordered={showBorder}
         options={{

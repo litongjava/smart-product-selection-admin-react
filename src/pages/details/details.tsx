@@ -40,7 +40,7 @@ export default () => {
     <>
       {contextHolder}
       <AutoDetail
-        title={'from:' + from + ', id:' + id}
+        title={'From:' + from + ', ID:' + id}
         data={data}
         loading={loading}
         columns={2}

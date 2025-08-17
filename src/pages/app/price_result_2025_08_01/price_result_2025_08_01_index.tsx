@@ -17,8 +17,6 @@ export default () => {
     params.update_time_type = 'string[]';
     params.update_time_op = 'bt';
 
-
-
     return params;
   };
 

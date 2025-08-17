@@ -19,6 +19,7 @@ export const addListColumns = (
     title: 'Num',
     dataIndex: 'rowNumber',
     width: 60,
+    align: 'center',
     hideInForm: true,
     hideInSearch: true,
     render: (text, entity, index, action?: ActionType) => {
@@ -44,6 +45,7 @@ export const addListColumns = (
     copyable: true,
     ellipsis: true,
     width: 80,
+    align: 'center',
     render: (dom, entity, index, action?: ActionType) => {
       let num = entity?.rowNumber;
       if (action?.pageInfo && typeof index === 'number') {

@@ -1,5 +1,10 @@
 import { ProColumns } from '@ant-design/pro-components';
 
+const trueFalseOptions = [
+  { label: 'true', value: true },
+  { label: 'false', value: false },
+];
+
 export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
   {
     title: 'Main Image Url',
@@ -7,20 +12,33 @@ export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
     valueType: 'image',
   },
   {
-    title: 'Asin',
-    dataIndex: 'asin',
-    valueType: 'text',
+    "title": "Asin",
+    "dataIndex": "asin",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
+
   },
   {
-    title: 'Marketplace',
-    dataIndex: 'marketplace',
-    valueType: 'text',
+    "title": "Upc",
+    "dataIndex": "upc",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
   },
   {
-    title: 'Parent Asin',
-    dataIndex: 'parent_asin',
-    valueType: 'text',
-    hideInTable: true,
+    "title": "amazon_url",
+    "dataIndex": "amazon_url",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
+  },
+  {
+    "title": "kehe_url",
+    "dataIndex": "kehe_url",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
   },
   {
     title: 'Brand',
@@ -57,35 +75,6 @@ export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
     valueType: 'text',
   },
   {
-    title: 'Variant Attributes',
-    dataIndex: 'variant_attributes',
-    valueType: 'text',
-    hideInTable: true,
-  },
-  {
-    title: 'Specs',
-    dataIndex: 'specs',
-    valueType: 'text',
-    hideInTable: true,
-  },
-  {
-    title: 'Bullets',
-    dataIndex: 'bullets',
-    valueType: 'text',
-  },
-  {
-    title: 'Currency',
-    dataIndex: 'currency',
-    valueType: 'text',
-    hideInTable: true,
-  },
-  {
-    title: 'List Price',
-    dataIndex: 'list_price',
-    valueType: 'text',
-    hideInTable: true,
-  },
-  {
     title: 'Sale Price',
     dataIndex: 'sale_price',
     valueType: 'text',
@@ -94,11 +83,13 @@ export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
     title: 'Coupon Amount',
     dataIndex: 'coupon_amount',
     valueType: 'text',
+    hideInTable: true,
   },
   {
     title: 'Coupon Percent',
     dataIndex: 'coupon_percent',
     valueType: 'text',
+    hideInTable: true,
   },
   {
     title: 'Subscribe Save Percent',
@@ -110,6 +101,7 @@ export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
     title: 'Deal Badge',
     dataIndex: 'deal_badge',
     valueType: 'text',
+    hideInTable: true,
   },
   {
     title: 'Seller',
@@ -126,6 +118,7 @@ export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
     title: 'Prime Eligible',
     dataIndex: 'prime_eligible',
     valueType: 'text',
+    hideInTable: true,
   },
   {
     title: 'Availability Status',
@@ -137,13 +130,10 @@ export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
   {
     title: 'In Stock',
     dataIndex: 'in_stock',
-    valueType: 'text',
-  },
-  {
-    title: 'Image Urls',
-    dataIndex: 'image_urls',
-    valueType: 'text',
-    hideInTable: true,
+    "valueType": "select",
+    fieldProps:{
+      options:trueFalseOptions
+    }
   },
   {
     title: 'Rating',
@@ -155,14 +145,6 @@ export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
     dataIndex: 'reviews_count',
     valueType: 'text',
   },
-  {
-    title: 'Source Url',
-    dataIndex: 'source_url',
-    valueType: 'textarea',
-    ellipsis: true,
-    copyable: true,
-  },
-
   // --- 更新时间（展示 & 筛选）---
   {
     title: 'Update Time',

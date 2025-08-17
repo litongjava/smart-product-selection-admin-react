@@ -2,7 +2,7 @@ import ApiTable from '@/components/common/ApiTable';
 import { amazon_product_2025_08_01_columns } from '@/pages/app/amazon_product_2025_08_01/amazon_product_2025_08_01_column';
 
 export default () => {
-  const from = 'amazon_product_2025_08_01';
+  const from = 'amazon_products_2025_08_01';
   const beforePageRequest = (params: any, isRecoveryMode?: boolean) => {
     params.idType = 'long';
 
@@ -35,7 +35,7 @@ export default () => {
       columns={amazon_product_2025_08_01_columns()}
       beforePageRequest={beforePageRequest}
       beforeCreateRequest={beforeCreateRequest}
-      editable={false}
+      editable={true}
       removable={false}
     />
   );

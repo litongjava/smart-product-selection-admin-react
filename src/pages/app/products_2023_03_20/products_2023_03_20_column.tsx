@@ -4,12 +4,31 @@ export const products_2003_03_20_columns = (): ProColumns<any>[] => [
   {
     "title": "Asin",
     "dataIndex": "asin",
-    "valueType": "text"
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
+
   },
   {
     "title": "Upc",
     "dataIndex": "upc",
-    "valueType": "text"
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
+  },
+  {
+    "title": "amazon_url",
+    "dataIndex": "amazon_url",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
+  },
+  {
+    "title": "kehe_url",
+    "dataIndex": "kehe_url",
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
   },
   {
     "title": "Brand",
@@ -24,7 +43,7 @@ export const products_2003_03_20_columns = (): ProColumns<any>[] => [
   {
     "title": "Description",
     "dataIndex": "description",
-    "valueType": "textarea"
+    "valueType": "textarea",
   },
   {
     "title": "Size",
@@ -129,7 +148,9 @@ export const products_2003_03_20_columns = (): ProColumns<any>[] => [
   {
     "title": "Note",
     "dataIndex": "note",
-    "valueType": "text"
+    "valueType": "text",
+    ellipsis: true,
+    copyable: true,
   },
   {
     "title": "Remark",

@@ -41,23 +41,24 @@ export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
     copyable: true,
   },
   {
+    title: 'Category Breadcrumb',
+    dataIndex: 'category_breadcrumb',
+    valueType: 'textarea',
+    hideInTable: true,
+    ellipsis: true,
+    copyable: true,
+  },
+  {
     title: 'Brand',
     dataIndex: 'brand',
     valueType: 'text',
+    ellipsis: true,
+    copyable: true,
   },
   {
     title: 'Title',
     dataIndex: 'title',
     valueType: 'textarea',
-    ellipsis: true,
-    copyable: true,
-  },
-  {
-    title: 'Category Breadcrumb',
-    dataIndex: 'category_breadcrumb',
-    valueType: 'textarea',
-    ellipsis: true,
-    copyable: true,
   },
   {
     title: 'Uom',

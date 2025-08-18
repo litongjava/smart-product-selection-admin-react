@@ -59,6 +59,8 @@ export const amazon_product_2025_08_01_columns = (): ProColumns<any>[] => [
     title: 'Title',
     dataIndex: 'title',
     valueType: 'textarea',
+    ellipsis: true,
+    copyable: true,
   },
   {
     title: 'Uom',

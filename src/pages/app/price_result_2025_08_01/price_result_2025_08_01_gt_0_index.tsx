@@ -12,7 +12,7 @@ export default () => {
       params.deleted = 0;
     }
     params.remarkOp = 'ct';
-    params.orderBy = 'update_time';
+    params.orderBy = 'profit';
     params.isAsc = 'false';
     params.update_time_type = 'string[]';
     params.update_time_op = 'bt';

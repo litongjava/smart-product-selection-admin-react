@@ -16,11 +16,17 @@ export default () => {
     params.isAsc = 'false';
     params.update_time_type = 'string[]';
     params.update_time_op = 'bt';
-    params.kehePriceOp = 'gt';
+
     params.profitOp = 'gt';
-    if(!params.profit){
-      params.profit='0';
+    params.kehePriceOp = 'gt';
+    params.amazonFbaFeesOp = 'gt';
+    if (!params.profit) {
+      params.profit = '0';
     }
+    if (!params.kehe_price) {
+      params.kehe_price = '0';
+    }
+
     return params;
   };
 

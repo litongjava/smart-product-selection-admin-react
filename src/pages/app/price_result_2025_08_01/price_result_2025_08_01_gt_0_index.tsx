@@ -16,7 +16,7 @@ export default () => {
     params.isAsc = 'false';
     params.update_time_type = 'string[]';
     params.update_time_op = 'bt';
-
+    params.kehePriceOp = 'gt';
     params.profitOp = 'gt';
     if(!params.profit){
       params.profit='0';

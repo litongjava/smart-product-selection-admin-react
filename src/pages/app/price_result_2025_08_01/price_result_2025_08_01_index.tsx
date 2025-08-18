@@ -17,6 +17,7 @@ export default () => {
     params.update_time_type = 'string[]';
     params.update_time_op = 'bt';
 
+    params.nameOp = 'ct';
     params.profitOp = 'gt';
     params.kehePriceOp = 'gt';
     params.amazonFbaFeesOp = 'gt';

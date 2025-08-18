@@ -92,6 +92,16 @@ export const price_result_2025_08_01_columns = (): ProColumns<any>[] => [
     valueType: 'text',
   },
   {
+    title: 'Rating',
+    dataIndex: 'rating',
+    valueType: 'text',
+  },
+  {
+    title: 'Reviews Count',
+    dataIndex: 'reviews_count',
+    valueType: 'text',
+  },
+  {
     title: 'ama_net_revenue',
     dataIndex: 'net_revenue',
     valueType: 'text',

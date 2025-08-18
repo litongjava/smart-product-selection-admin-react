@@ -43,10 +43,6 @@ const isEmpty = (v: any) =>
 const looksLikeDateTime = (v: any) =>
   typeof v === 'string' && /\d{4}-\d{2}-\d{2}(?:[ T]\d{2}:\d{2}:\d{2}(?:\.\d+)?)?/.test(v);
 
-const looksLikeNumber = (v: any) =>
-  (typeof v === 'number' && Number.isFinite(v)) ||
-  (typeof v === 'string' && v.trim() !== '' && !Number.isNaN(Number(v)));
-
 const isURL = (v: any) =>
   typeof v === 'string' && /^https?:\/\/[\w\-]+(\.[\w\-]+)+([/?#].*)?$/i.test(v);
 
@@ -109,11 +105,6 @@ const makeDefaultRender =
       }
       // 很长的 URL 也可以折叠（交给 LongTextBlock）
       return <LongTextBlock text={val} threshold={threshold} />;
-    }
-
-    if (looksLikeNumber(val)) {
-      const n = Number(val);
-      return Number.isFinite(n) ? <Text>{n.toLocaleString()}</Text> : <Text>{String(val)}</Text>;
     }
 
     // 普通文本：可折叠
